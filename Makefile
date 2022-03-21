@@ -1,6 +1,6 @@
 SOURCE_FILES := $(shell find . \( -name '*.go' -not -path './vendor/*' \))
 INTEGRATION_TESTS := $(shell find tests -name 'test-*.py' -exec basename {} .py \;)
-VERSION := $(shell git describe --always --dirty)
+VERSION := $(shell git describe --always)-nsone
 
 # Ghostunnel binary
 ghostunnel: $(SOURCE_FILES)
